@@ -57,7 +57,7 @@
 
 .Toastify__toast-container {
     z-index: 9999;
-    -webkit-transform: translate3d(0, 0, 9999px);
+    transform: translate3d(0, 0, 9999px);
     position: fixed;
     padding: 4px;
     width: 320px;
@@ -731,7 +731,7 @@
     overflow: hidden !important
 }
 
-@use 'sass:math';@keyframes marching-ants {
+@keyframes marching-ants {
     0% {
         background-position: 0 0, 0 100%, 0 0, 100% 0
     }
@@ -4098,8 +4098,7 @@ canvas {
 }
 
 .delete,.modal-close {
-    -moz-appearance: none;
-    -webkit-appearance: none;
+    appearance: none;
     background-color: rgba(10,10,10,0.2);
     border: none;
     border-radius: 290486px;
@@ -4198,8 +4197,7 @@ canvas {
 }
 
 .button,.input,.textarea,.select select,.file-cta,.file-name,.pagination-previous,.pagination-next,.pagination-link,.pagination-ellipsis {
-    -moz-appearance: none;
-    -webkit-appearance: none;
+    appearance: none;
     align-items: center;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -7256,8 +7254,7 @@ a.box:active {
 }
 
 .progress {
-    -moz-appearance: none;
-    -webkit-appearance: none;
+    appearance: none;
     border: none;
     border-radius: 290486px;
     display: block;
@@ -10005,7 +10002,7 @@ a.list-item {
     flex-direction: column;
     max-height: calc(100vh - 40px);
     overflow: hidden;
-    -ms-overflow-y: visible
+    overflow-y: visible
 }
 
 .modal-card-head,.modal-card-foot {
@@ -16413,7 +16410,7 @@ footer.footer-light-medium .small-footer-logo {
     animation: scaleOut 0.6s
 }
 
-@-webkit-keyframes pulsate {
+@keyframes pulsate {
     0% {
         -webkit-transform: scale(0.1, 0.1);
         opacity: 0.0
@@ -21274,8 +21271,7 @@ textarea.textarea.is-button+.textarea-button button {
 .tagsinput .tag {
     position: relative;
     border: 1px solid #039BE5;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
+    border-radius: 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24808,7 +24804,7 @@ input[type=range].slider:not([orient="vertical"]).has-output+output,input[type=r
 
 input[type=range].slider:not([orient="vertical"]).has-output {
     display: inline-block;
-    width: calc(100% - ( $slider-output-width + 1rem ))
+    width: calc(100% - (50px + 1rem)); /* Ganti variabel dengan nilai langsung */
 }
 
 input[type=range].slider:not([orient="vertical"]).has-output+output {
@@ -24829,7 +24825,7 @@ input[type=range].slider:not([orient="vertical"]).has-output-tooltip+output {
 }
 
 input[type=range].slider[orient="vertical"] {
-    -webkit-appearance: slider-vertical;
+    appearance: slider-vertical;
     writing-mode: bt-lr
 }
 
@@ -24855,7 +24851,7 @@ input[type=range].slider[orient="vertical"]::-webkit-slider-thumb {
 
 input[type=range].slider::-webkit-slider-runnable-track {
     cursor: pointer;
-    animate: 0.2s;
+    transition: 0.2s;
     box-shadow: 0px 0px 0px #666;
     background: #cecece;
     border-radius: 50px;
@@ -24864,7 +24860,7 @@ input[type=range].slider::-webkit-slider-runnable-track {
 
 input[type=range].slider::-moz-range-track {
     cursor: pointer;
-    animate: 0.2s;
+    transition: 0.2s;
     box-shadow: 0px 0px 0px #666;
     background: #cecece;
     border-radius: 50px;
@@ -24873,7 +24869,7 @@ input[type=range].slider::-moz-range-track {
 
 input[type=range].slider::-ms-track {
     cursor: pointer;
-    animate: 0.2s;
+    transition: 0.2s;
     box-shadow: 0px 0px 0px #666;
     background: #cecece;
     border-radius: 50px;
@@ -25331,7 +25327,7 @@ input[type=range].slider.is-danger::-ms-track {
 
 /*! _slider.scss | Bulkit | CSS Ninja */
 .bubble-range {
-    -webkit-appearance: none;
+    appearance: none;
     margin: 12.5px 0;
     width: 100%
 }
@@ -26540,11 +26536,11 @@ input[type=range].slider.is-danger::-ms-track {
 }
 
 .switch[type="checkbox"][disabled]+label::before {
-    opactiy: 0.5
+    opacity: 0.5
 }
 
 .switch[type="checkbox"][disabled]+label::after {
-    opactiy: 0.5
+    opacity: 0.5
 }
 
 .switch[type="checkbox"][disabled]+label:hover,.switch[type="checkbox"][disabled]+label.is-hovered {
@@ -28289,7 +28285,6 @@ figure.team-hover figcaption {
 }
 
 figure.team-hover h2 {
-    float: left;
     display: inline-block
 }
 
@@ -28314,10 +28309,9 @@ figure.team-hover p.description {
     text-transform: none;
     font-size: 90%;
     opacity: 0;
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     -webkit-transition: opacity 0.35s;
     transition: opacity 0.35s;
-    -webkit-backface-visibility: hidden
 }
 
 figure.team-hover h2,figure.team-hover p.icon-links a {
@@ -28341,7 +28335,6 @@ figure.team-hover p.icon-links a span::before {
     padding: 8px 10px;
     font-family: 'FontAwesome';
     color: #444F60;
-    speak: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
 }
@@ -28812,7 +28805,7 @@ figure.team-slanted:hover .member-position {
     margin: 5px;
     background-color: #ccc;
     cursor: pointer;
-    -webkit-appearance: none
+    appearance: none
 }
 
 .Wallop .Wallop-dot:active,.Wallop .Wallop-dot:focus {
@@ -31923,7 +31916,6 @@ body #bulchat div {
 
 #chat-widget .chat-widget-body .message-input .message-options .emoji-button {
     position: relative;
-    float: left;
     display: inline-block;
     cursor: pointer;
     opacity: .7;
@@ -31947,7 +31939,6 @@ body #bulchat div {
 
 #chat-widget .chat-widget-body .message-input .message-options .attach-button {
     position: relative;
-    float: left;
     display: inline-block;
     cursor: pointer;
     opacity: .7;
@@ -34082,32 +34073,32 @@ body #bulchat div {
 }
 
 .fa-rotate-90 {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+    filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
     transform: rotate(90deg)
 }
 
 .fa-rotate-180 {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+    filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
     transform: rotate(180deg)
 }
 
 .fa-rotate-270 {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+    filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
     transform: rotate(270deg)
 }
 
 .fa-flip-horizontal {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+    filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
     transform: scale(-1, 1)
 }
 
 .fa-flip-vertical {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+    filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
     transform: scale(1, -1)
 }
 
 .fa-flip-both,.fa-flip-horizontal.fa-flip-vertical {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+    filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
     transform: scale(-1, -1)
 }
 
@@ -40252,7 +40243,6 @@ body #bulchat div {
 
 .video-js {
     display: block;
-    vertical-align: top;
     box-sizing: border-box;
     color: #fff;
     background-color: #000;
@@ -41932,7 +41922,6 @@ video::-webkit-media-text-track-display {
 
 .klc {
     font-family: "KLC" !important;
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -45629,43 +45618,43 @@ html {
 }
 
 .is-ellipsis-1 {
-    -webkit-line-clamp: 1
+    line-clamp: 1
 }
 
 .is-ellipsis-2 {
-    -webkit-line-clamp: 2
+    line-clamp: 2
 }
 
 .is-ellipsis-3 {
-    -webkit-line-clamp: 3
+    line-clamp: 3
 }
 
 .is-ellipsis-4 {
-    -webkit-line-clamp: 4
+    line-clamp: 4
 }
 
 .is-ellipsis-5 {
-    -webkit-line-clamp: 5
+    line-clamp: 5
 }
 
 .is-ellipsis-6 {
-    -webkit-line-clamp: 6
+    line-clamp: 6
 }
 
 .is-ellipsis-7 {
-    -webkit-line-clamp: 7
+    line-clamp: 7
 }
 
 .is-ellipsis-8 {
-    -webkit-line-clamp: 8
+    line-clamp: 8
 }
 
 .is-ellipsis-9 {
-    -webkit-line-clamp: 9
+    line-clamp: 9
 }
 
 .is-ellipsis-10 {
-    -webkit-line-clamp: 10
+    line-clamp: 10
 }
 
 .list-item {

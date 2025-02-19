@@ -1,3 +1,7 @@
+<?php
+include 'config.php';
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -18,16 +22,9 @@
     </script>
     <meta name="viewport" content="width=device-width" />
     <meta charSet="utf-8" />
-    <title>KLC::Kemenkeu Learning Center</title>
+    <title>KMS Kereta Api Indonesia</title>
     <meta name="next-head-count" content="3" />
     <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="preload" href="/_next/static/css/4355f379.f98ec4d5.chunk.css" as="style" />
-    <link rel="stylesheet" href="/_next/static/css/4355f379.f98ec4d5.chunk.css" data-n-g="" />
-    <link rel="preload" href="/_next/static/css/styles.1c54d0cd.chunk.css" as="style" />
-    <link rel="stylesheet" href="/_next/static/css/styles.1c54d0cd.chunk.css" data-n-g="" />
-    <link rel="preload" href="/_next/static/css/pages/_app.5bb57646.chunk.css" as="style" />
-    <link rel="stylesheet" href="/_next/static/css/pages/_app.5bb57646.chunk.css" data-n-g="" /><noscript
-        data-n-css=""></noscript>
     <link rel="preload" href="/_next/static/chunks/main-e3fa878b7e6ab30ce9c3.js" as="script" />
     <link rel="preload" href="/_next/static/chunks/webpack-8a9d73c6335efaabd0b2.js" as="script" />
     <link rel="preload" href="/_next/static/chunks/framework.977d41e983feb5a02816.js" as="script" />
@@ -49,6 +46,7 @@
     <link rel="preload" href="/_next/static/chunks/1de3a899b1771db70db36b794ac04d46247daea4.b3ee3a9fc42f68e6d83c.js"
         as="script" />
     <link rel="preload" href="/_next/static/chunks/pages/index-46e3e9e3071953c899ba.js" as="script" />
+
     <style id="__jsx-3374979045">
         .navbar.jsx-3374979045 {
             background-color: #235390 !important;
@@ -93,6 +91,7 @@
             border-width: 0px 0px 4px;
         }
     </style>
+
     <style id="__jsx-3578798494">
         .flex-card.jsx-3578798494 {
             border-radius: 16px;
@@ -126,6 +125,7 @@
             padding: 0.45rem;
         }
     </style>
+
     <style id="__jsx-3945195989">
         .footer.jsx-3945195989 {
             padding: 1rem 1.5rem 1rem;
@@ -169,6 +169,7 @@
             height: 60px !important;
         }
     </style>
+    
     <style id="__jsx-3280504233">
         @media screen and (max-width:768px) {
             .section-padding-mobile.jsx-3280504233 {
@@ -227,7 +228,7 @@
                 <nav role="navigation" aria-label="main navigation" class="jsx-3374979045 navbar navbar-wrapper">
                     <div class="jsx-3374979045 container">
                         <div class="jsx-3374979045 navbar-brand"><a href="/" class="jsx-3374979045 navbar-item"><img
-                                    src="https://klc2.kemenkeu.go.id/shared/assets/images/klc-logo.png" alt="klc-logo"
+                                    src="assets/img/icon.jpg" alt="kai-logo"
                                     class="jsx-3374979045" /></a><a id="search" role="button"
                                 data-target="navbarBasicExample1"
                                 class="jsx-3374979045 navbar-item burger has-text-light ml-auto is-hidden-tablet is-hidden-desktop undefined"><span
