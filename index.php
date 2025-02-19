@@ -10,42 +10,11 @@ include 'config.php';
     <meta charSet="utf-8" />
     <link rel="icon" type="image/png" href="/static/favicon.png" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZZXMNKHBG5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-ZZXMNKHBG5', {
-            page_path: window.location.pathname,
-        });
-    </script>
     <meta name="viewport" content="width=device-width" />
     <meta charSet="utf-8" />
     <title>KMS Kereta Api Indonesia</title>
     <meta name="next-head-count" content="3" />
     <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="preload" href="/_next/static/chunks/main-e3fa878b7e6ab30ce9c3.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/webpack-8a9d73c6335efaabd0b2.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/framework.977d41e983feb5a02816.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/4355f379.034de57766ff36fd46b3.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/9ff9be06b57276f3ba1427dc63e0692201cd1d4d.04a667487401969d1c94.js"
-        as="script" />
-    <link rel="preload" href="/_next/static/chunks/42829fb9f03e384a5b69de1520db58f194ec3e8e.8b839a91419f1d48e550.js"
-        as="script" />
-    <link rel="preload" href="/_next/static/chunks/c5261feb125c5576f54372219c317e4b70b9062b.9993e0c41dc3ed600385.js"
-        as="script" />
-    <link rel="preload" href="/_next/static/chunks/styles.0fa2971ce4cb79d0da2e.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/pages/_app-2d6a838cfc4da34d4c64.js" as="script" />
-    <link rel="preload" href="/_next/static/chunks/96c25d8893900cadf338cd3d422457c14ce48831.833c79c39c3bedfe2b79.js"
-        as="script" />
-    <link rel="preload" href="/_next/static/chunks/3dd2754358cfe4c7305e31c6f743d7133e711b29.1b29ad885c3aeae5c85d.js"
-        as="script" />
-    <link rel="preload" href="/_next/static/chunks/c331b698671e11098b9c5d7aa7fe41e14137a545.88fca935cafcac5c6a1d.js"
-        as="script" />
-    <link rel="preload" href="/_next/static/chunks/1de3a899b1771db70db36b794ac04d46247daea4.b3ee3a9fc42f68e6d83c.js"
-        as="script" />
-    <link rel="preload" href="/_next/static/chunks/pages/index-46e3e9e3071953c899ba.js" as="script" />
 
     <style id="__jsx-3374979045">
         .navbar.jsx-3374979045 {
@@ -169,7 +138,7 @@ include 'config.php';
             height: 60px !important;
         }
     </style>
-    
+
     <style id="__jsx-3280504233">
         @media screen and (max-width:768px) {
             .section-padding-mobile.jsx-3280504233 {
@@ -222,15 +191,16 @@ include 'config.php';
 <body>
     <div id="__next">
         <div class="jsx-3280504233">
+            <!-- Background -->
             <section
-                style="background-image:url(https://klc2.kemenkeu.go.id/shared/assets/images/doodle.svg);background-repeat:repeat;background-size:12%"
+                style="background-image:url('assets/img/background.png');background-repeat:repeat;background-size:12%;"
                 class="jsx-3280504233 hero is-fullheight">
+                <!-- Navbar -->
                 <nav role="navigation" aria-label="main navigation" class="jsx-3374979045 navbar navbar-wrapper">
                     <div class="jsx-3374979045 container">
                         <div class="jsx-3374979045 navbar-brand"><a href="/" class="jsx-3374979045 navbar-item"><img
-                                    src="assets/img/icon.jpg" alt="kai-logo"
-                                    class="jsx-3374979045" /></a><a id="search" role="button"
-                                data-target="navbarBasicExample1"
+                                    src="assets/img/icon.jpg" alt="kai-logo" class="jsx-3374979045" /></a><a id="search"
+                                role="button" data-target="navbarBasicExample1"
                                 class="jsx-3374979045 navbar-item burger has-text-light ml-auto is-hidden-tablet is-hidden-desktop undefined"><span
                                     class="jsx-3374979045"><i class="jsx-3374979045 fa fa-search fa-lg"></i>
                                 </span></a><a id="burger" role="button" aria-label="menu" aria-expanded="false"
@@ -279,6 +249,8 @@ include 'config.php';
                     </div>
                     <div class="jsx-3374979045 bordernav"></div>
                 </nav>
+
+                <!-- Content -->
                 <div class="jsx-3280504233 mt-60">
                     <section class="jsx-3280504233 section no-padding-top section-padding-mobile">
                         <div class="jsx-3280504233 container">
@@ -321,6 +293,8 @@ include 'config.php';
                                         </svg></div>
                                 </div>
                             </section>
+
+
                             <div class="jsx-3280504233 content-wrapper no-padding-top is-hidden-mobile">
                                 <div
                                     class="jsx-3280504233 columns is-vcentered is-centered is-mobile has-text-centered">
@@ -331,7 +305,7 @@ include 'config.php';
                                                 class="jsx-3280504233" /></div>
                                         <div class="jsx-3280504233 has-text-left m-auto">
                                             <p class="jsx-3280504233 clean-text is-size-5 has-text-weight-bold">Pusat
-                                                Pelatihan Keuangan Negara</p>
+                                                Pelatihan Kereta Api Indonesia</p>
                                             <p class="jsx-3280504233 clean-text is-size-6 has-text-weight-semibold">
                                                 Temukan pelatihanmu!</p>
                                         </div>
@@ -342,7 +316,7 @@ include 'config.php';
                                                 alt="knowledge" class="jsx-3280504233" /></div>
                                         <div class="jsx-3280504233 has-text-left m-auto">
                                             <p class="jsx-3280504233 clean-text is-size-5 has-text-weight-bold">Pusat
-                                                Pengetahuan Keuangan Negara</p>
+                                                Pengetahuan Kereta Api Indonesia</p>
                                             <p class="jsx-3280504233 clean-text is-size-6 has-text-weight-semibold">
                                                 Jelajahi seluruh pengetahuan!</p>
                                         </div>
@@ -679,34 +653,7 @@ include 'config.php';
                 </div>
             </section>
         </div>
-        <div class="Toastify"></div>
     </div>
-    <script id="__NEXT_DATA__"
-        type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"KFGmUAUvNRA5wD-PPf-2f","isFallback":false,"gip":true}</script>
-    <script nomodule="" src="/_next/static/chunks/polyfills-6f7214e4c229210c42e1.js"></script>
-    <script src="/_next/static/chunks/main-e3fa878b7e6ab30ce9c3.js" async=""></script>
-    <script src="/_next/static/chunks/webpack-8a9d73c6335efaabd0b2.js" async=""></script>
-    <script src="/_next/static/chunks/framework.977d41e983feb5a02816.js" async=""></script>
-    <script src="/_next/static/chunks/4355f379.034de57766ff36fd46b3.js" async=""></script>
-    <script src="/_next/static/chunks/9ff9be06b57276f3ba1427dc63e0692201cd1d4d.04a667487401969d1c94.js"
-        async=""></script>
-    <script src="/_next/static/chunks/42829fb9f03e384a5b69de1520db58f194ec3e8e.8b839a91419f1d48e550.js"
-        async=""></script>
-    <script src="/_next/static/chunks/c5261feb125c5576f54372219c317e4b70b9062b.9993e0c41dc3ed600385.js"
-        async=""></script>
-    <script src="/_next/static/chunks/styles.0fa2971ce4cb79d0da2e.js" async=""></script>
-    <script src="/_next/static/chunks/pages/_app-2d6a838cfc4da34d4c64.js" async=""></script>
-    <script src="/_next/static/chunks/96c25d8893900cadf338cd3d422457c14ce48831.833c79c39c3bedfe2b79.js"
-        async=""></script>
-    <script src="/_next/static/chunks/3dd2754358cfe4c7305e31c6f743d7133e711b29.1b29ad885c3aeae5c85d.js"
-        async=""></script>
-    <script src="/_next/static/chunks/c331b698671e11098b9c5d7aa7fe41e14137a545.88fca935cafcac5c6a1d.js"
-        async=""></script>
-    <script src="/_next/static/chunks/1de3a899b1771db70db36b794ac04d46247daea4.b3ee3a9fc42f68e6d83c.js"
-        async=""></script>
-    <script src="/_next/static/chunks/pages/index-46e3e9e3071953c899ba.js" async=""></script>
-    <script src="/_next/static/KFGmUAUvNRA5wD-PPf-2f/_buildManifest.js" async=""></script>
-    <script src="/_next/static/KFGmUAUvNRA5wD-PPf-2f/_ssgManifest.js" async=""></script>
 </body>
 
 </html>
