@@ -1,0 +1,46 @@
+body {
+    background-image: url('../img/background.png'); /* Ganti dengan path gambar */
+    background-repeat: repeat;
+    padding-top: 70px;
+}
+
+/*
+Navbar
+*/
+
+/* Navbar tetap di atas saat scroll */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Pastikan navbar berada di atas elemen lain */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Efek bayangan agar lebih terlihat */
+}
+
+/* Agar dropdown muncul saat hover */
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+/* Styling dropdown agar lebih bagus */
+.dropdown-menu {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling item dalam dropdown */
+.dropdown-item {
+    color: #333;
+    padding: 10px 15px;
+}
+
+/* Hover effect untuk dropdown item */
+.dropdown-item:hover {
+    background-color: #94b6ef;
+    color: #fff;
+}
