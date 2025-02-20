@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px" class=""><g><path style="fill:#437DBF" d="M256,59.733C147.601,59.733,59.733,147.601,59.733,256S147.601,452.267,256,452.267  S452.267,364.399,452.267,256H256V59.733z" data-original="#4398D1" class="" data-old_color="#4398D1"/><path style="fill:#FFBC42" d="M452.267,256H256l138.752,138.752C431.65,358.016,452.352,308.07,452.267,256z" data-original="#FDB62F" class="" data-old_color="#FDB62F"/><path style="fill:#F35244" d="M290.133,25.6v196.267H486.4C486.4,113.468,398.532,25.6,290.133,25.6z" data-original="#F46B27" class="active-path" data-old_color="#F46B27"/><g>
+	<rect y="34.133" style="fill:#BFBFBF" width="76.8" height="17.067" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+	<rect y="68.267" style="fill:#BFBFBF" width="76.8" height="17.067" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+	
+		<rect x="68.274" y="90.449" transform="matrix(-0.6247 0.7809 -0.7809 -0.6247 238.0993 175.7744)" style="fill:#BFBFBF" width="17.067" height="109.315" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+	<rect x="435.2" style="fill:#BFBFBF" width="76.8" height="17.067" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+	<rect x="435.2" y="34.133" style="fill:#BFBFBF" width="76.8" height="17.067" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+	
+		<rect x="392.533" y="85.419" transform="matrix(-0.8 0.6 -0.6 -0.8 839.7313 -92.0065)" style="fill:#BFBFBF" width="85.333" height="17.067" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+</g><g>
+	<rect x="162.133" y="494.933" style="fill:#87CED9;" width="17.067" height="17.067" data-original="#87CED9" class=""/>
+	<rect x="196.267" y="494.933" style="fill:#87CED9;" width="17.067" height="17.067" data-original="#87CED9" class=""/>
+	<rect x="230.4" y="494.933" style="fill:#87CED9;" width="17.067" height="17.067" data-original="#87CED9" class=""/>
+	<rect x="264.533" y="494.933" style="fill:#87CED9;" width="17.067" height="17.067" data-original="#87CED9" class=""/>
+	<rect x="298.667" y="494.933" style="fill:#87CED9;" width="17.067" height="17.067" data-original="#87CED9" class=""/>
+	<rect x="332.8" y="494.933" style="fill:#87CED9;" width="17.067" height="17.067" data-original="#87CED9" class=""/>
+</g><g>
+	<rect y="409.6" style="fill:#BFBFBF" width="76.8" height="17.067" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+	<rect y="443.733" style="fill:#BFBFBF" width="59.733" height="17.067" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+	<rect y="375.467" style="fill:#BFBFBF" width="76.8" height="17.067" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+</g><path style="fill:#235390" d="M375.467,375.467l-46.336-46.336c-57.899,39.612-122.701,68.036-191.061,83.797  c78.148,58.701,187.58,50.953,256.683-18.176L375.467,375.467z" data-original="#3E8CC7" class="" data-old_color="#3E8CC7"/><path style="fill:#FE9000" d="M329.131,329.131l65.621,65.621c8.909-8.875,16.939-18.594,23.979-29.013  c3.55-5.111,6.827-10.411,9.813-15.872c1.536-2.731,2.987-5.572,4.352-8.533c2.773-5.726,5.248-11.597,7.424-17.579  c2.219-6.059,4.181-12.203,5.803-18.432c1.621-6.229,2.901-12.715,3.84-19.2c1.562-9.967,2.33-20.036,2.304-30.123h-45.397  C384.521,283.904,358.349,308.523,329.131,329.131z" data-original="#F5AB20" class="" data-old_color="#F5AB20"/><g>
+	<rect x="435.2" y="392.533" style="fill:#BFBFBF" width="76.8" height="17.067" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+	<rect x="435.2" y="426.667" style="fill:#BFBFBF" width="76.8" height="17.067" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+	
+		<rect x="426.667" y="298.667" transform="matrix(-0.6 0.8 -0.8 -0.6 969.3867 197.9733)" style="fill:#BFBFBF" width="17.067" height="85.333" data-original="#DBDBDB" class="" data-old_color="#DBDBDB"/>
+</g></g> </svg>

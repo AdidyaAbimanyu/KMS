@@ -1,659 +1,263 @@
-<?php
-include 'config.php';
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta charSet="utf-8" />
-    <link rel="icon" type="image/png" href="/static/favicon.png" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-    <meta name="viewport" content="width=device-width" />
-    <meta charSet="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KMS Kereta Api Indonesia</title>
-    <meta name="next-head-count" content="3" />
-    <link rel="stylesheet" href="assets/css/index.css">
 
-    <style id="__jsx-3374979045">
-        .navbar.jsx-3374979045 {
-            background-color: #235390 !important;
-            margin-bottom: 15px;
-            box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
-            border-image: linear-gradient(to right, red, yellow);
-        }
+    <!-- Favicon -->
+    <link rel="icon" type="image" href="assets/img/favicon.jpg">
 
-        @media screen and (max-width:1023px) {
-            .navbar-menu.jsx-3374979045 {
-                background-color: #235390 !important;
-            }
-        }
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        .navbar-wrapper.jsx-3374979045 .navbar-brand.jsx-3374979045 img.jsx-3374979045 {
-            height: 40px;
-        }
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-        .navbar-item.jsx-3374979045 img.jsx-3374979045 {
-            max-height: 3.75rem;
-        }
-
-        .navbar-burger.jsx-3374979045 {
-            color: #fff;
-        }
-
-        .is-drop.jsx-3374979045:hover {
-            background: none !important;
-        }
-
-        .navbar-link.is-active.jsx-3374979045 {
-            background: none !important;
-        }
-
-        .button.jsx-3374979045 {
-            border-radius: 8px;
-        }
-
-        .button.accent-btn.jsx-3374979045 {
-            color: #235390;
-            border-color: #cccbcb;
-            border-width: 0px 0px 4px;
-        }
-    </style>
-
-    <style id="__jsx-3578798494">
-        .flex-card.jsx-3578798494 {
-            border-radius: 16px;
-            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        .flex-card.jsx-3578798494 .card-body.jsx-3578798494 {
-            min-height: 180px;
-        }
-
-        @media (max-width:768px) {
-            .section-title-wrapper.jsx-3578798494 {
-                padding: 0 !important;
-            }
-
-            .flex-card.jsx-3578798494 .card-body.jsx-3578798494 {
-                min-height: 100px;
-                padding: 10px 10px !important;
-            }
-        }
-
-        .columns.jsx-3578798494 {
-            overflow-x: auto;
-        }
-
-        .columns.jsx-3578798494::-webkit-scrollbar {
-            display: none;
-        }
-
-        .column.jsx-3578798494 {
-            padding: 0.45rem;
-        }
-    </style>
-
-    <style id="__jsx-3945195989">
-        .footer.jsx-3945195989 {
-            padding: 1rem 1.5rem 1rem;
-            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12);
-            background-color: #235390;
-        }
-
-        footer.footer.jsx-3945195989 {
-            border-top: none !important;
-            margin-left: 0 !important;
-        }
-
-        footer.footer-light-left.jsx-3945195989 .footer-nav-right.jsx-3945195989 .footer-nav-link.jsx-3945195989 {
-            color: whitesmoke !important;
-        }
-
-        footer.footer-light-left.jsx-3945195989 .level-item.jsx-3945195989 .icon.jsx-3945195989 .fab.fa-twitter.jsx-3945195989:hover {
-            color: #1da1f2 !important;
-        }
-
-        footer.footer-light-left.jsx-3945195989 .level-item.jsx-3945195989 .icon.jsx-3945195989 .fab.fa-facebook.jsx-3945195989:hover {
-            color: #3273dc !important;
-        }
-
-        footer.footer-light-left.jsx-3945195989 .level-item.jsx-3945195989 .icon.jsx-3945195989 .fab.fa-youtube.jsx-3945195989:hover {
-            color: #f00 !important;
-        }
-
-        footer.footer-light-left.jsx-3945195989 .level-item.jsx-3945195989 .icon.jsx-3945195989 .fab.fa-instagram.jsx-3945195989:hover {
-            color: #db2f77 !important;
-        }
-
-        .level-item.jsx-3945195989 {
-            -webkit-box-pack: left !important;
-            -webkit-justify-content: left !important;
-            -ms-flex-pack: left !important;
-            justify-content: left !important;
-        }
-
-        .small-footer-logo.jsx-3945195989 {
-            height: 60px !important;
-        }
-    </style>
-
-    <style id="__jsx-3280504233">
-        @media screen and (max-width:768px) {
-            .section-padding-mobile.jsx-3280504233 {
-                padding: 1rem 1rem 1rem 1rem !important;
-            }
-        }
-
-        .floating-circle.jsx-3280504233 {
-            background: unset !important;
-            box-shadow: unset !important;
-            margin-right: 10px;
-            margin-left: 10px;
-            padding-top: unset !important;
-        }
-
-        .floating-circle.jsx-3280504233 img.jsx-3280504233 {
-            width: 80px !important;
-            left: 0px !important;
-        }
-
-        .m-auto.jsx-3280504233 {
-            margin-top: auto !important;
-            margin-bottom: auto !important;
-        }
-
-        .section.jsx-3280504233 .section-feature-description.jsx-3280504233 {
-            line-height: 2 !important;
-        }
-
-        .section.is-skewed-sm.jsx-3280504233 {
-            padding-bottom: 200px;
-            padding-top: 30px;
-        }
-
-        .column.is-flex.jsx-3280504233 {
-            -webkit-box-pack: center !important;
-            -webkit-justify-content: center !important;
-            -ms-flex-pack: center !important;
-            justify-content: center !important;
-        }
-
-        @media (max-width:768px) {
-            .section-title-wrapper.jsx-3280504233 {
-                padding: 0 !important;
-            }
-        }
-    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
-    <div id="__next">
-        <div class="jsx-3280504233">
-            <!-- Background -->
-            <section
-                style="background-image:url('assets/img/background.png');background-repeat:repeat;background-size:12%;"
-                class="jsx-3280504233 hero is-fullheight">
-                <!-- Navbar -->
-                <nav role="navigation" aria-label="main navigation" class="jsx-3374979045 navbar navbar-wrapper">
-                    <div class="jsx-3374979045 container">
-                        <div class="jsx-3374979045 navbar-brand"><a href="/" class="jsx-3374979045 navbar-item"><img
-                                    src="assets/img/icon.jpg" alt="kai-logo" class="jsx-3374979045" /></a><a id="search"
-                                role="button" data-target="navbarBasicExample1"
-                                class="jsx-3374979045 navbar-item burger has-text-light ml-auto is-hidden-tablet is-hidden-desktop undefined"><span
-                                    class="jsx-3374979045"><i class="jsx-3374979045 fa fa-search fa-lg"></i>
-                                </span></a><a id="burger" role="button" aria-label="menu" aria-expanded="false"
-                                data-target="navbarBasicExample"
-                                class="jsx-3374979045 navbar-burger burger ml-auto"><span aria-hidden="true"
-                                    class="jsx-3374979045"></span><span aria-hidden="true"
-                                    class="jsx-3374979045"></span><span aria-hidden="true"
-                                    class="jsx-3374979045"></span></a></div>
-                        <div class="jsx-3374979045 is-hidden">
-                            <div class="jsx-3374979045 undefined">
-                                <div id="navbarBasicExampleSearch" class="jsx-3374979045 navbar-menu">
-                                    <div class="jsx-3374979045 navbar-start">
-                                        <div class="navbar-item is-hidden-mobile undefined">
-                                            <div class="control has-icons-left"><input type="text" class="input"
-                                                    style="width:350px" placeholder="Cari pelatihan" /><span
-                                                    class="icon is-left"><i class="material-icons">search</i></span>
-                                            </div>
-                                        </div>
-                                        <div class="navbar-item is-hidden-desktop">
-                                            <div class="control has-icons-left"><input type="text"
-                                                    class="input is-medium" placeholder="Cari pelatihan" /><span
-                                                    class="icon is-left"><i class="material-icons">search</i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="navbarBasicExample" class="jsx-3374979045 navbar-menu">
-                                    <div class="jsx-3374979045 navbar-end">
-                                        <div class="jsx-3374979045 navbar-item"><a href="/"
-                                                class="jsx-3374979045 navbar-item is-slide is-centered-tablet has-text-light grow">Beranda</a><a
-                                                href="/listcourse"
-                                                class="jsx-3374979045 navbar-item is-slide is-centered-tablet has-text-light">Pelatihan</a><a
-                                                href="https://klc2.kemenkeu.go.id/kms"
-                                                class="jsx-3374979045 navbar-item is-slide is-centered-tablet has-text-light">Pusat
-                                                Pengetahuan</a><a href="https://klc2.kemenkeu.go.id/kms/faq"
-                                                class="jsx-3374979045 navbar-item is-slide is-centered-tablet has-text-light">Pusat
-                                                Bantuan</a></div>
-                                        <div class="jsx-3374979045 navbar-item is-button"><a id="#signup-btn"
-                                                href="/auths/signin"
-                                                class="jsx-3374979045 button secondary-btn has-text-weight-semibold">Masuk</a>
-                                        </div>
-                                    </div>
-                                </div>
+    <?php include 'includes/navbar.php'; ?>
+
+    <section class="text-center py-5">
+        <div class="container">
+            <!-- Carousel dengan tombol di luar -->
+            <div class="carousel-container">
+                <button class="carousel-control-prev" type="button" data-bs-target="#announcementCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <div id="announcementCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="announcement-box">
+                                <img src="assets/img/hero/hero-1.jpg" alt="Slide 1" class="img-fluid">
                             </div>
                         </div>
-                    </div>
-                    <div class="jsx-3374979045 bordernav"></div>
-                </nav>
-
-                <!-- Content -->
-                <div class="jsx-3280504233 mt-60">
-                    <section class="jsx-3280504233 section no-padding-top section-padding-mobile">
-                        <div class="jsx-3280504233 container">
-                            <section id="basic" class="jsx-3280504233 section mt-20 no-padding">
-                                <div style="padding-bottom:30%;height:0" class="jsx-3280504233 container">
-                                    <div style="max-width:100%" class="jsx-3280504233 image-carousel"><svg
-                                            aria-labelledby="e70lnv-aria" role="img" style="width:100%;height:100%"
-                                            width="1152" height="280" viewBox="0 0 1152 280">
-                                            <title id="e70lnv-aria">Loading...</title>
-                                            <rect role="presentation" x="0" y="0" width="100%" height="100%"
-                                                clip-path="url(#e70lnv-diff)" style="fill:url(#e70lnv-animated-diff)">
-                                            </rect>
-                                            <defs role="presentation">
-                                                <clipPath id="e70lnv-diff">
-                                                    <rect x="164" y="28" rx="30" ry="30" width="649" height="231">
-                                                    </rect>
-                                                    <rect x="844" y="26" rx="30" ry="30" width="658" height="233">
-                                                    </rect>
-                                                    <rect x="-524" y="28" rx="30" ry="30" width="652" height="231">
-                                                    </rect>
-                                                </clipPath>
-                                                <linearGradient id="e70lnv-animated-diff">
-                                                    <stop offset="0%" stop-color="#f5f6f7" stop-opacity="1">
-                                                        <animate attributeName="offset" values="-2; -2; 1"
-                                                            keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite">
-                                                        </animate>
-                                                    </stop>
-                                                    <stop offset="50%" stop-color="#eee" stop-opacity="1">
-                                                        <animate attributeName="offset" values="-1; -1; 2"
-                                                            keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite">
-                                                        </animate>
-                                                    </stop>
-                                                    <stop offset="100%" stop-color="#f5f6f7" stop-opacity="1">
-                                                        <animate attributeName="offset" values="0; 0; 3"
-                                                            keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite">
-                                                        </animate>
-                                                    </stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg></div>
-                                </div>
-                            </section>
-
-
-                            <div class="jsx-3280504233 content-wrapper no-padding-top is-hidden-mobile">
-                                <div
-                                    class="jsx-3280504233 columns is-vcentered is-centered is-mobile has-text-centered">
-                                    <div class="jsx-3280504233 column is-6 is-flex">
-                                        <div class="jsx-3280504233 floating-circle"><img
-                                                src="https://klc2.kemenkeu.go.id/shared/assets/images/course.svg"
-                                                alt="course" width="200%" style="margin-top:10px"
-                                                class="jsx-3280504233" /></div>
-                                        <div class="jsx-3280504233 has-text-left m-auto">
-                                            <p class="jsx-3280504233 clean-text is-size-5 has-text-weight-bold">Pusat
-                                                Pelatihan Kereta Api Indonesia</p>
-                                            <p class="jsx-3280504233 clean-text is-size-6 has-text-weight-semibold">
-                                                Temukan pelatihanmu!</p>
-                                        </div>
-                                    </div>
-                                    <div class="jsx-3280504233 column is-6 is-flex">
-                                        <div class="jsx-3280504233 floating-circle"><img
-                                                src="https://klc2.kemenkeu.go.id/shared/assets/images/knowledge.svg"
-                                                alt="knowledge" class="jsx-3280504233" /></div>
-                                        <div class="jsx-3280504233 has-text-left m-auto">
-                                            <p class="jsx-3280504233 clean-text is-size-5 has-text-weight-bold">Pusat
-                                                Pengetahuan Kereta Api Indonesia</p>
-                                            <p class="jsx-3280504233 clean-text is-size-6 has-text-weight-semibold">
-                                                Jelajahi seluruh pengetahuan!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="jsx-3280504233 section has-background-apa-itu-klc is-medium is-hidden-mobile">
-                        <div class="jsx-3280504233 container">
-                            <div class="jsx-3280504233 columns is-vcentered">
-                                <div class="jsx-3280504233 column">
-                                    <div class="jsx-3280504233 columns is-vcentered">
-                                        <div class="jsx-3280504233 column is-5"><img
-                                                src="https://klc2.kemenkeu.go.id/shared/assets/images/apa-itu-klc-2.jpg"
-                                                alt="apa itu klc" style="border-radius:10px" class="jsx-3280504233" />
-                                        </div>
-                                        <div class="jsx-3280504233 column is-6 is-offset-1">
-                                            <div class="jsx-3280504233 icon-subtitle"><i
-                                                    class="jsx-3280504233 im im-icon-Bar-Chart"></i></div>
-                                            <div
-                                                class="jsx-3280504233 title quick-feature is-handwritten text-bold has-text-light">
-                                                <h2 style="font-size:120%" class="jsx-3280504233">Apa itu KLC ?</h2>
-                                            </div>
-                                            <div class="jsx-3280504233 title-divider is-small"></div><span
-                                                class="jsx-3280504233 section-feature-description has-text-light">Kemenkeu
-                                                Learning Center merupakan media pembelajaran online yang membahas
-                                                berbagai materi tentang Pengelolaan Keuangan Negara yang dapat diakses
-                                                oleh seluruh pegawai Kementerian Keuangan dan masyarakat umum. Kemenkeu
-                                                Learning Center berfungsi untuk mendukung proses pendidikan dan
-                                                pelatihan yang diselenggarakan di lingkungan Kementerian
-                                                Keuangan.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="jsx-3280504233 section section-padding-mobile">
-                        <div class="jsx-3280504233 container">
-                            <section class="jsx-3578798494 section no-padding-top">
-                                <div class="jsx-3578798494 container">
-                                    <div class="jsx-3578798494 section-title-wrapper has-text-left no-padding-top">
-                                        <h2
-                                            class="jsx-3578798494 section-title-landing is-size-4-mobile no-padding-top">
-                                            Kategori</h2>
-                                    </div>
-                                    <div class="jsx-3578798494 columns is-centered">
-                                        <div class="jsx-3578798494 column is-12">
-                                            <div
-                                                class="jsx-3578798494 columns is-mobile is-centered is-multiline  has-text-centered">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="jsx-3280504233 section section-padding-mobile">
-                                <div class="jsx-3280504233 container">
-                                    <div class="jsx-3280504233 columns is-centered">
-                                        <div class="jsx-3280504233 column"><a href="/listcourse?type=OPEN-ACCESS">
-                                                <div
-                                                    class="box klc-home-box has-background-open-access has-text-centered">
-                                                    <p
-                                                        class="title quick-feature is-handwritten-custom  text-bold has-text-light has-text-centered-mobile">
-                                                        Pelatihan &quot;Open Access&quot;</p>
-                                                    <p
-                                                        class="has-text-white is-size-08-mobile mt-10 has-text-centered-mobile">
-                                                        Terdapat <!-- -->0<!-- --> e-Learning &amp; microlearning
-                                                        terbuka untuk siapa saja!</p>
-                                                </div>
-                                            </a></div>
-                                        <div class="jsx-3280504233 column"><a href="/listcourse?tag=atase_keuangan">
-                                                <div
-                                                    class="box klc-home-box  has-background-atase-access has-text-centered">
-                                                    <p
-                                                        class="title quick-feature is-handwritten-custom  text-bold has-text-light has-text-centered-mobile">
-                                                        Pelatihan untuk &quot;Atase Keuangan&quot;</p>
-                                                    <p
-                                                        class="has-text-white is-size-08-mobile mt-10 has-text-centered-mobile">
-                                                        Terdapat <!-- -->0<!-- --> e-Learning &amp; microlearning untuk
-                                                        para Atase Keuangan</p>
-                                                </div>
-                                            </a></div>
-                                        <div class="jsx-3280504233 column"><a href="/listcourse?tag=umkm">
-                                                <div
-                                                    class="box klc-home-box  has-background-umkm-access has-text-centered">
-                                                    <p
-                                                        class="title quick-feature is-handwritten-custom  text-bold has-text-light has-text-centered-mobile">
-                                                        Pelatihan untuk &quot;UMKM&quot;</p>
-                                                    <p
-                                                        class="has-text-white is-size-08-mobile mt-10 has-text-centered-mobile">
-                                                        Terdapat <!-- -->0<!-- --> e-Learning &amp; microlearning untuk
-                                                        para UMKM</p>
-                                                </div>
-                                            </a></div>
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="jsx-3280504233 section no-padding-left no-padding-right no-padding-top">
-                                <div class="jsx-3280504233 container">
-                                    <div class="jsx-3280504233 section-title-wrapper">
-                                        <h2 class="jsx-3280504233 section-title-landing is-size-4-mobile">Pelatihan
-                                            Terbaru</h2>
-                                    </div><svg aria-labelledby="4pl2l0i-aria" role="img" style="width:100%;height:100%"
-                                        width="1152" height="273" viewBox="0 0 1152 273">
-                                        <title id="4pl2l0i-aria">Loading...</title>
-                                        <rect role="presentation" x="0" y="0" width="100%" height="100%"
-                                            clip-path="url(#4pl2l0i-diff)" style="fill:url(#4pl2l0i-animated-diff)">
-                                        </rect>
-                                        <defs role="presentation">
-                                            <clipPath id="4pl2l0i-diff">
-                                                <rect x="6" y="190" rx="2" ry="2" width="196" height="16"></rect>
-                                                <rect x="7" y="220" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="2" y="-3" rx="2" ry="2" width="203" height="185"></rect>
-                                                <rect x="10" y="242" rx="2" ry="2" width="139" height="10"></rect>
-                                                <rect x="229" y="-6" rx="2" ry="2" width="203" height="185"></rect>
-                                                <rect x="467" y="-6" rx="2" ry="2" width="203" height="185"></rect>
-                                                <rect x="701" y="-2" rx="2" ry="2" width="203" height="185"></rect>
-                                                <rect x="920" y="-2" rx="2" ry="2" width="203" height="185"></rect>
-                                                <rect x="232" y="189" rx="2" ry="2" width="196" height="16"></rect>
-                                                <rect x="468" y="188" rx="2" ry="2" width="196" height="16"></rect>
-                                                <rect x="922" y="190" rx="2" ry="2" width="196" height="16"></rect>
-                                                <rect x="705" y="189" rx="2" ry="2" width="196" height="16"></rect>
-                                                <rect x="156" y="217" rx="11" ry="11" width="44" height="37"></rect>
-                                                <rect x="234" y="218" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="234" y="236" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="471" y="216" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="708" y="214" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="926" y="214" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="473" y="235" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="707" y="233" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="926" y="231" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="384" y="213" rx="11" ry="11" width="44" height="37"></rect>
-                                                <rect x="624" y="213" rx="11" ry="11" width="44" height="37"></rect>
-                                                <rect x="859" y="212" rx="11" ry="11" width="44" height="37"></rect>
-                                                <rect x="1074" y="211" rx="11" ry="11" width="44" height="37"></rect>
-                                            </clipPath>
-                                            <linearGradient id="4pl2l0i-animated-diff">
-                                                <stop offset="0%" stop-color="#f5f6f7" stop-opacity="1">
-                                                    <animate attributeName="offset" values="-2; -2; 1"
-                                                        keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite">
-                                                    </animate>
-                                                </stop>
-                                                <stop offset="50%" stop-color="#eee" stop-opacity="1">
-                                                    <animate attributeName="offset" values="-1; -1; 2"
-                                                        keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite">
-                                                    </animate>
-                                                </stop>
-                                                <stop offset="100%" stop-color="#f5f6f7" stop-opacity="1">
-                                                    <animate attributeName="offset" values="0; 0; 3"
-                                                        keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite">
-                                                    </animate>
-                                                </stop>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                            </section>
-                            <section class="jsx-3280504233 section no-padding-left no-padding-right no-padding-top">
-                                <div class="jsx-3280504233 container">
-                                    <div class="jsx-3280504233 section-title-wrapper">
-                                        <h2 class="jsx-3280504233 section-title-landing is-size-4-mobile">Pelatihan
-                                            Terpopuler</h2>
-                                    </div><svg aria-labelledby="cwsjch-aria" role="img" style="width:100%;height:100%"
-                                        width="1152" height="273" viewBox="0 0 1152 273">
-                                        <title id="cwsjch-aria">Loading...</title>
-                                        <rect role="presentation" x="0" y="0" width="100%" height="100%"
-                                            clip-path="url(#cwsjch-diff)" style="fill:url(#cwsjch-animated-diff)">
-                                        </rect>
-                                        <defs role="presentation">
-                                            <clipPath id="cwsjch-diff">
-                                                <rect x="6" y="190" rx="2" ry="2" width="196" height="16"></rect>
-                                                <rect x="7" y="220" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="2" y="-3" rx="2" ry="2" width="203" height="185"></rect>
-                                                <rect x="10" y="242" rx="2" ry="2" width="139" height="10"></rect>
-                                                <rect x="229" y="-6" rx="2" ry="2" width="203" height="185"></rect>
-                                                <rect x="467" y="-6" rx="2" ry="2" width="203" height="185"></rect>
-                                                <rect x="701" y="-2" rx="2" ry="2" width="203" height="185"></rect>
-                                                <rect x="920" y="-2" rx="2" ry="2" width="203" height="185"></rect>
-                                                <rect x="232" y="189" rx="2" ry="2" width="196" height="16"></rect>
-                                                <rect x="468" y="188" rx="2" ry="2" width="196" height="16"></rect>
-                                                <rect x="922" y="190" rx="2" ry="2" width="196" height="16"></rect>
-                                                <rect x="705" y="189" rx="2" ry="2" width="196" height="16"></rect>
-                                                <rect x="156" y="217" rx="11" ry="11" width="44" height="37"></rect>
-                                                <rect x="234" y="218" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="234" y="236" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="471" y="216" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="708" y="214" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="926" y="214" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="473" y="235" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="707" y="233" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="926" y="231" rx="2" ry="2" width="144" height="10"></rect>
-                                                <rect x="384" y="213" rx="11" ry="11" width="44" height="37"></rect>
-                                                <rect x="624" y="213" rx="11" ry="11" width="44" height="37"></rect>
-                                                <rect x="859" y="212" rx="11" ry="11" width="44" height="37"></rect>
-                                                <rect x="1074" y="211" rx="11" ry="11" width="44" height="37"></rect>
-                                            </clipPath>
-                                            <linearGradient id="cwsjch-animated-diff">
-                                                <stop offset="0%" stop-color="#f5f6f7" stop-opacity="1">
-                                                    <animate attributeName="offset" values="-2; -2; 1"
-                                                        keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite">
-                                                    </animate>
-                                                </stop>
-                                                <stop offset="50%" stop-color="#eee" stop-opacity="1">
-                                                    <animate attributeName="offset" values="-1; -1; 2"
-                                                        keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite">
-                                                    </animate>
-                                                </stop>
-                                                <stop offset="100%" stop-color="#f5f6f7" stop-opacity="1">
-                                                    <animate attributeName="offset" values="0; 0; 3"
-                                                        keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite">
-                                                    </animate>
-                                                </stop>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </div>
-                            </section>
-                        </div>
-                    </section>
-                    <div class="jsx-3945195989 ">
-                        <div class="jsx-3945195989 columns no-padding no-margin">
-                            <div id="column3" style="z-index:3" class="jsx-3945195989 column no-padding no-margin">
-                                <footer class="jsx-3945195989 footer footer-light-left">
-                                    <div class="jsx-3945195989 container">
-                                        <div class="jsx-3945195989 columns">
-                                            <div class="jsx-3945195989 column is-3">
-                                                <div class="jsx-3945195989 mb-20"><img
-                                                        src="https://klc2.kemenkeu.go.id/shared/assets/images/corpu-white.png"
-                                                        alt="logo" class="jsx-3945195989 small-footer-logo" /></div>
-                                                <div class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 moto has-text-light is-size-7">Hak Cipta
-                                                        Badan Pendidikan dan Pelatihan Keuangan</p>
-                                                    <p class="jsx-3945195989 moto has-text-light is-size-7">Kementerian
-                                                        Keuangan Republik Indonesia</p>
-                                                    <p class="jsx-3945195989 moto has-text-light is-size-7">Manajemen
-                                                        Situs Kemenkeu Learning Center</p>
-                                                    <p class="jsx-3945195989 moto has-text-light is-size-7">Jl.
-                                                        Purnawarman No 99 Kebayoran Baru, Jakarta<!-- --> </p>
-                                                    <p class="jsx-3945195989 moto has-text-light is-size-7">Selatan</p>
-                                                </div>
-                                            </div>
-                                            <div class="jsx-3945195989 column is-5 is-offset-1">
-                                                <p
-                                                    class="jsx-3945195989 is-size-5 has-text-light has-text-weight-bold mb-10">
-                                                    KLC</p><a href="/listcourse" class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">Pusat Pelatihan</p>
-                                                </a><a href="https://klc2.kemenkeu.go.id/kms" class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">Pusat Pengetahuan</p>
-                                                </a><a href="https://klc2.kemenkeu.go.id/kms/faq"
-                                                    class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">Pusat Bantuan</p>
-                                                </a><a href="/sertifikasi" class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">Sertifikasi</p>
-                                                </a><a href="https://klc2.kemenkeu.go.id/cat" class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">CAT (Computer Assisted
-                                                        Test) / Ujian Online</p>
-                                                </a><a href="https://klc2.kemenkeu.go.id/kspp" class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">KSPP (Kerja Sama Program
-                                                        Pelatihan)</p>
-                                                </a><a href="https://klc2.kemenkeu.go.id/sipp" class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">SIPP (Sistem Informasi
-                                                        Pemantauan Pembelajaran)</p>
-                                                </a><a href="https://klc2.kemenkeu.go.id/exloc" class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">exloc. (Expert Locator
-                                                        Kemenkeu)</p>
-                                                </a>
-                                                <p
-                                                    class="jsx-3945195989 is-size-5 has-text-light has-text-weight-bold mb-10 mt-20">
-                                                    Bantuan dan Panduan</p><a
-                                                    href="/help-desk/manual-category/a1d61a61-e989-47f8-8c9f-2c4746831105"
-                                                    class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">Panduan Pengguna</p>
-                                                </a><a href="https://kemenkeu-prime.kemenkeu.go.id/"
-                                                    class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">Hubungi Kemenkeu PRIME</p>
-                                                </a><a href="/help-desk/privacy-policy" class="jsx-3945195989">
-                                                    <p class="jsx-3945195989 has-text-light">Kebijakan Privasi</p>
-                                                </a>
-                                            </div>
-                                            <div class="jsx-3945195989 column">
-                                                <p class="jsx-3945195989 is-size-5 has-text-light has-text-weight-bold">
-                                                    Ikuti Kami</p>
-                                                <div class="jsx-3945195989 padding-10 is-flex grow"><a
-                                                        href="https://www.facebook.com/bppk.kemenkeu/" target="_blank"
-                                                        class="jsx-3945195989 level-item"><span
-                                                            class="jsx-3945195989 icon"><i
-                                                                class="jsx-3945195989 fab fa-facebook fa-2x "></i></span>
-                                                        <p class="jsx-3945195989 has-text-light ml-10">bppk.kemenkeu</p>
-                                                    </a></div>
-                                                <div class="jsx-3945195989 padding-10 grow"><a
-                                                        href="https://twitter.com/bppkkemenkeu" target="_blank"
-                                                        class="jsx-3945195989 level-item"><span
-                                                            class="jsx-3945195989 icon"><i
-                                                                class="jsx-3945195989 fab fa-twitter fa-2x "></i></span>
-                                                        <p class="jsx-3945195989 has-text-light ml-10">@bppkkemenkeu</p>
-                                                    </a></div>
-                                                <div class="jsx-3945195989 padding-10 grow"><a
-                                                        href="https://www.youtube.com/channel/UCDBqV8WfMOK2pwHQZvONb7g"
-                                                        target="_blank" class="jsx-3945195989 level-item"><span
-                                                            class="jsx-3945195989 icon"><i
-                                                                class="jsx-3945195989 fab fa-youtube fa-2x "></i></span>
-                                                        <p class="jsx-3945195989 has-text-light ml-10">BPPK Kemenkeu RI
-                                                        </p>
-                                                    </a></div>
-                                                <div class="jsx-3945195989 padding-10 grow"><a
-                                                        href="https://www.instagram.com/bppkkemenkeu/" target="_blank"
-                                                        class="jsx-3945195989 level-item"><span
-                                                            class="jsx-3945195989 icon"><i
-                                                                class="jsx-3945195989 fab fa-instagram fa-2x "></i></span>
-                                                        <p class="jsx-3945195989 has-text-light ml-10">bppkkemenkeu</p>
-                                                    </a></div><br class="jsx-3945195989" />
-                                                <p class="jsx-3945195989 is-size-5 has-text-light has-text-weight-bold">
-                                                    Unduh Aplikasi KLC Mobile</p>
-                                                <div class="jsx-3945195989 columns pt-10 is-mobile">
-                                                    <div class="jsx-3945195989 column grow no-padding-right"><a
-                                                            target="_blank" class="jsx-3945195989"
-                                                            href="https://play.google.com/store/apps/details?id=id.go.kemenkeu.bppk.klcmobile"><img
-                                                                src="https://klc2.kemenkeu.go.id/shared/assets/images/googleplay.png"
-                                                                class="jsx-3945195989" /></a></div>
-                                                    <div class="jsx-3945195989 column grow"><a target="_blank"
-                                                            class="jsx-3945195989"
-                                                            href="https://apps.apple.com/us/app/klc-mobile/id1543201006"><img
-                                                                src="https://klc2.kemenkeu.go.id/shared/assets/images/appstore.png"
-                                                                class="jsx-3945195989" /></a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </footer>
+                        <div class="carousel-item">
+                            <div class="announcement-box">
+                                <img src="assets/img/hero/hero-2.jpg" alt="Slide 2" class="img-fluid">
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+                <button class="carousel-control-next" type="button" data-bs-target="#announcementCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <!-- Two Columns with Icons -->
+            <div class="row text-center mt-4">
+                <div class="col-md-6">
+                    <img src="assets/img/course.svg" alt="Course Icon" class="img-fluid section-icon mb-3" width="100">
+                    <h4>Pusat Pelatihan Kereta Api Indonesia</h4>
+                    <p>Temukan pelatihanmu!</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/img/knowledge.svg" alt="Knowledge Icon" class="img-fluid section-icon mb-3"
+                        width="100">
+                    <h4>Pusat Pengetahuan Kereta Api Indonesia</h4>
+                    <p>Jelajahi seluruh pengetahuan!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apa itu KMS -->
+    <section class="section-klc">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <img src="https://klc2.kemenkeu.go.id/shared/assets/images/apa-itu-klc-2.jpg" alt="Apa itu KLC?"
+                        class="img-fluid rounded">
+                </div>
+                <div class="col-md-6 offset-md-1 text-light">
+                    <div class="icon-subtitle">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h2 class="fw-bold">Apa itu KMS?</h2>
+                    <div class="title-divider"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ut cum ex, ad esse temporibus
+                        cupiditate, dignissimos obcaecati animi eveniet, voluptatibus ipsum? Vel omnis illum, similique
+                        non consectetur laboriosam nam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategori -->
+    <div class="container py-5">
+        <h2 class="category-title mb-5">Kategori</h2>
+        <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-evenly">
+            <?php
+            $categories = [
+                ["name" => "Kebijakan Fiskal", "icon" => "assets/img/kategori/kategori-1.svg"],
+                ["name" => "Penerimaan Negara", "icon" => "assets/img/kategori/kategori-2.svg"],
+                ["name" => "Profesi Keuangan", "icon" => "assets/img/kategori/kategori-3.svg"],
+                ["name" => "Pengembangan SDM", "icon" => "assets/img/kategori/kategori-4.svg"],
+                ["name" => "PSIAP", "icon" => "assets/img/kategori/kategori-5.svg"],
+                ["name" => "Belanja Negara", "icon" => "assets/img/kategori/kategori-6.svg"],
+                ["name" => "Dukungan Manajemen K/L", "icon" => "assets/img/kategori/kategori-7.svg"],
+                ["name" => "Perbendaharaan dan Risiko", "icon" => "assets/img/kategori/kategori-8.svg"]
+            ];
+
+            foreach ($categories as $category) {
+                echo '<div class="col d-flex justify-content-evenly">';
+                echo '  <div class="category-item d-flex flex-column align-items-center">';
+                echo '    <div class="category-icon rounded-circle d-flex align-items-center justify-content-center">';
+                echo '      <img src="' . $category["icon"] . '" alt="' . $category["name"] . '" class="icon-img">';
+                echo '    </div>';
+                echo '    <p class="category-name mt-2 text-center">' . $category["name"] . '</p>';
+                echo '  </div>';
+                echo '</div>';
+            }
+            ?>
         </div>
     </div>
+
+    <!-- Kategori Pelatihan -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Pelatihan Open Access -->
+                <div class="col-md-4 mb-3">
+                    <a href="/listcourse" class="text-decoration-none" style="height: 200px;">
+                        <div class="klc-home-box has-background-open-access">
+                            <h5 class="fw-bold">Pelatihan "Open Access"</h5>
+                            <p>Terdapat <strong>0</strong> e-Learning & microlearning terbuka untuk siapa saja!</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Pelatihan Atase Keuangan -->
+                <div class="col-md-4 mb-3">
+                    <a href="/listcourse" class="text-decoration-none">
+                        <div class="klc-home-box has-background-atase-access">
+                            <h5 class="fw-bold">Pelatihan untuk "Atase Keuangan"</h5>
+                            <p>Terdapat <strong>0</strong> e-Learning & microlearning untuk para Atase Keuangan</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Pelatihan UMKM -->
+                <div class="col-md-4 mb-3">
+                    <a href="/listcourse" class="text-decoration-none">
+                        <div class="klc-home-box has-background-umkm-access">
+                            <h5 class="fw-bold">Pelatihan untuk "UMKM"</h5>
+                            <p>Terdapat <strong>0</strong> e-Learning & microlearning untuk para UMKM</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pelatihan Terbaru -->
+    <div class="container py-5">
+        <h2 class="section-title">Pelatihan Terbaru</h2>
+        <div id="carouselTerbaru" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <?php
+                $pelatihanTerbaru = [
+                    ["title" => "E-Learning Keselamatan Operasional Kereta Api", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.98", "peserta" => "1200 peserta"],
+                    ["title" => "Manajemen Pemeliharaan Sarana Perkeretaapian", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.95", "peserta" => "890 peserta"],
+                    ["title" => "Sistem Persinyalan Kereta Api Digital", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.97", "peserta" => "750 peserta"],
+                    ["title" => "Pelatihan Keamanan di Stasiun dan Jalur Kereta", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "5.00", "peserta" => "1320 peserta"],
+                    ["title" => "Perawatan dan Troubleshooting Lokomotif Diesel", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.92", "peserta" => "980 peserta"],
+                    ["title" => "Manajemen Pelayanan Penumpang Kereta Api", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.96", "peserta" => "1450 peserta"],
+                    ["title" => "Teknik Dasar Perawatan Rel dan Bantalan", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.94", "peserta" => "670 peserta"],
+                    ["title" => "Analisis Kinerja dan Efisiensi Perkeretaapian", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.99", "peserta" => "810 peserta"]
+                ];
+
+                $chunks = array_chunk($pelatihanTerbaru, 4);
+                foreach ($chunks as $index => $group) {
+                    $active = ($index === 0) ? 'active' : '';
+                    echo '<div class="carousel-item ' . $active . '">';
+                    echo '<div class="row">';
+                    foreach ($group as $pelatihan) {
+                        echo '<div class="col-md-3">';
+                        echo '  <div class="card mx-auto">';
+                        echo '    <img src="' . $pelatihan["image"] . '" class="card-img-top" alt="' . $pelatihan["title"] . '">';
+                        echo '    <div class="card-body">';
+                        echo '      <h5 class="card-title">' . $pelatihan["title"] . '</h5>';
+                        echo '      <p class="text-muted">' . $pelatihan["peserta"] . '</p>';
+                        echo '      <span class="badge bg-warning text-dark mb-2">⭐ ' . $pelatihan["rating"] . '</span>';
+                        echo '      <a href="#" class="btn btn-success btn-sm btn-lihat">Lihat</a>';
+                        echo '    </div>';
+                        echo '  </div>';
+                        echo '</div>';
+                    }
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselTerbaru" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselTerbaru" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Pelatihan Terpopuler -->
+    <div class="container py-5">
+        <h2 class="section-title">Pelatihan Terpopuler</h2>
+        <div id="carouselPopuler" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <?php
+                $pelatihanPopuler = [
+                    ["title" => "E-Learning Keselamatan dan SOP Masinis", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.98", "peserta" => "17000 peserta"],
+                    ["title" => "Manajemen Pemeliharaan Rel dan Jembatan", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.95", "peserta" => "13450 peserta"],
+                    ["title" => "Teknologi Transportasi Perkeretaapian", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.96", "peserta" => "12890 peserta"],
+                    ["title" => "E-Learning Manajemen Stasiun & Layanan Penumpang", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.97", "peserta" => "14560 peserta"],
+                    ["title" => "Sistem Persinyalan Kereta Berbasis AI", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.99", "peserta" => "13820 peserta"],
+                    ["title" => "Pelatihan Perawatan Lokomotif Elektrik", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.95", "peserta" => "12375 peserta"],
+                    ["title" => "Strategi Pengelolaan Risiko Operasional Kereta", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.98", "peserta" => "11050 peserta"],
+                    ["title" => "E-Learning Perencanaan Rute dan Jadwal Kereta", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.96", "peserta" => "10580 peserta"]
+                ];
+
+                $chunks = array_chunk($pelatihanPopuler, 4);
+                foreach ($chunks as $index => $group) {
+                    $active = ($index === 0) ? 'active' : '';
+                    echo '<div class="carousel-item ' . $active . '">';
+                    echo '<div class="row">';
+                    foreach ($group as $pelatihan) {
+                        echo '<div class="col-md-3">';
+                        echo '  <div class="card">';
+                        echo '    <img src="' . $pelatihan["image"] . '" class="card-img-top" alt="' . $pelatihan["title"] . '">';
+                        echo '    <div class="card-body">';
+                        echo '      <h5 class="card-title">' . $pelatihan["title"] . '</h5>';
+                        echo '      <p class="text-muted">' . $pelatihan["peserta"] . '</p>';
+                        echo '      <span class="badge bg-warning text-dark mb-2">⭐ ' . $pelatihan["rating"] . '</span>';
+                        echo '      <a href="#" class="btn btn-sm btn-success btn-lihat">Lihat</a>';
+                        echo '    </div>';
+                        echo '  </div>';
+                        echo '</div>';
+                    }
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPopuler" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPopuler" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <?php include 'includes/footer.php'; ?>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

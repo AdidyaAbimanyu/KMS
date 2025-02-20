@@ -1,0 +1,268 @@
+/*
+Navbar
+*/
+
+/* Navbar tetap di atas saat scroll */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Pastikan navbar berada di atas elemen lain */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Efek bayangan agar lebih terlihat */
+}
+
+/* Agar dropdown muncul saat hover */
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+/* Styling dropdown agar lebih bagus */
+.dropdown-menu {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling item dalam dropdown */
+.dropdown-item {
+    color: #333;
+    padding: 10px 15px;
+}
+
+/* Hover effect untuk dropdown item */
+.dropdown-item:hover {
+    background-color: #94b6ef;
+    color: #fff;
+}
+
+/*
+Hero
+*/
+
+/* Kotak pengumuman */
+.announcement-box {
+    background-color: #2C2C54;
+    /* Warna sesuai desain */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    /* Ukuran tetap */
+    width: 100%;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set ukuran tetap untuk carousel */
+#announcementCarousel {
+    width: 900px;
+    /* Pastikan lebar tetap */
+    max-width: 100%;
+}
+
+/* Pastikan semua carousel item memiliki ukuran yang sama */
+.carousel-inner {
+    width: 100%;
+}
+
+.carousel-item {
+    width: 100%;
+    text-align: center;
+}
+
+/* Ukuran gambar dalam carousel */
+.announcement-box img {
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    /* Diperbesar dan tetap */
+    object-fit: cover;
+    /* Hindari distorsi */
+    border-radius: 10px;
+}
+
+/* Tombol navigasi di luar gambar */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+/* Posisi tombol navigasi di luar carousel */
+.carousel-control-prev {
+    left: -90px;
+}
+
+.carousel-control-next {
+    right: -90px;
+}
+
+/* Warna panah agar lebih terlihat */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/*
+Apa itu KLC?
+*/
+
+.section-klc {
+    background-color: #2C2C54;
+    /* Ganti dengan warna sesuai desain */
+    padding: 50px 0;
+}
+
+.text-light {
+    color: #fff;
+}
+
+.title-divider {
+    width: 50px;
+    height: 4px;
+    background-color: #fff;
+    margin: 10px 0;
+}
+
+.icon-subtitle i {
+    font-size: 2rem;
+    color: #f8f9fa;
+}
+
+/*
+Kategori
+*/
+
+.category-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #f0f0f0;
+    /* Warna background */
+    border-radius: 50%;
+    /* Membuat lingkaran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-img {
+    width: 50px;
+    /* Ukuran ikon */
+    height: auto;
+}
+
+.category-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/*
+Kategori Pelatihan
+*/
+
+.klc-home-box {
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    min-height: 150px;
+}
+
+.has-background-open-access {
+    background-color: #007bff;
+    /* Warna untuk Open Access */
+}
+
+.has-background-atase-access {
+    background-color: #28a745;
+    /* Warna untuk Atase Keuangan */
+}
+
+.has-background-umkm-access {
+    background-color: #ffc107;
+    /* Warna untuk UMKM */
+    color: #000;
+}
+
+.klc-home-box p {
+    margin-bottom: 0;
+}
+
+/*
+Daftar Pelatihan
+*/
+
+.section-title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-weight: bold;
+    max-height: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: block;
+}
+
+.text-muted {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.badge {
+    flex-grow: 1;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+.btn-lihat {
+    flex-grow: 1;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
