@@ -1,0 +1,17 @@
+/* Pastikan konten utama tidak tertimpa sidebar */
+.content {
+    margin-left: 270px; /* Sesuaikan dengan lebar sidebar */
+    padding: 20px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 150px; /* Sesuaikan tinggi gambar */
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

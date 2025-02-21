@@ -13,8 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -35,12 +35,12 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="announcement-box">
-                                <img src="assets/img/hero/hero-1.jpg" alt="Slide 1" class="img-fluid">
+                                <img src="assets/img/main/main-1.png" alt="Slide 1" class="img-fluid">
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="announcement-box">
-                                <img src="assets/img/hero/hero-2.jpg" alt="Slide 2" class="img-fluid">
+                                <img src="" alt="Slide 2" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -51,19 +51,11 @@
                 </button>
             </div>
 
-            <!-- Two Columns with Icons -->
-            <div class="row text-center mt-4">
-                <div class="col-md-6">
-                    <img src="assets/img/course.svg" alt="Course Icon" class="img-fluid section-icon mb-3" width="100">
-                    <h4>Pusat Pelatihan Kereta Api Indonesia</h4>
-                    <p>Temukan pelatihanmu!</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="assets/img/knowledge.svg" alt="Knowledge Icon" class="img-fluid section-icon mb-3"
-                        width="100">
-                    <h4>Pusat Pengetahuan Kereta Api Indonesia</h4>
-                    <p>Jelajahi seluruh pengetahuan!</p>
-                </div>
+            <div class="text-center mv-4">
+                <img src="assets/img/main/knowledge.svg" alt="Knowledge Icon" class="img-fluid section-icon mb-3"
+                    width="100">
+                <h4>Pusat Pengetahuan Kereta Api Indonesia</h4>
+                <p>Jelajahi seluruh pengetahuan!</p>
             </div>
         </div>
     </section>
@@ -73,8 +65,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-5">
-                    <img src="https://klc2.kemenkeu.go.id/shared/assets/images/apa-itu-klc-2.jpg" alt="Apa itu KLC?"
-                        class="img-fluid rounded">
+                    <img src="assets/img/kms.png" alt="Apa itu KLC?" class="img-fluid" width="700">
                 </div>
                 <div class="col-md-6 offset-md-1 text-light">
                     <div class="icon-subtitle">
@@ -92,27 +83,27 @@
 
     <!-- Kategori -->
     <div class="container py-5">
-        <h2 class="category-title mb-5">Kategori</h2>
+        <h2 class="category-title mb-5">Unit</h2>
         <div class="row row-cols-2 row-cols-md-4 g-4 justify-content-evenly">
             <?php
-            $categories = [
-                ["name" => "Kebijakan Fiskal", "icon" => "assets/img/kategori/kategori-1.svg"],
-                ["name" => "Penerimaan Negara", "icon" => "assets/img/kategori/kategori-2.svg"],
-                ["name" => "Profesi Keuangan", "icon" => "assets/img/kategori/kategori-3.svg"],
-                ["name" => "Pengembangan SDM", "icon" => "assets/img/kategori/kategori-4.svg"],
-                ["name" => "PSIAP", "icon" => "assets/img/kategori/kategori-5.svg"],
-                ["name" => "Belanja Negara", "icon" => "assets/img/kategori/kategori-6.svg"],
-                ["name" => "Dukungan Manajemen K/L", "icon" => "assets/img/kategori/kategori-7.svg"],
-                ["name" => "Perbendaharaan dan Risiko", "icon" => "assets/img/kategori/kategori-8.svg"]
+            $units = [
+                ["name" => "Direktorat Perdagangan", "icon" => '<svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6H20M4 6L12 2L20 6M4 6V18H20V6M9 14H15M9 18H15M9 10H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'],
+                ["name" => "Direktorat Operasi", "icon" => '<svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12H21M3 12L6 9M3 12L6 15M21 12L18 9M21 12L18 15M9 21V14H15V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'],
+                ["name" => "Direktorat Infrastruktur", "icon" => '<svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 21V3H21V21H3ZM8 21V14H16V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'],
+                ["name" => "Direktorat Perencanaan Strategis dan Sarana", "icon" => '<svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12H21M3 12L6 9M3 12L6 15M21 12L18 9M21 12L18 15M10 3H14V21H10V3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'],
+                ["name" => "Direktorat Keselamatan dan Keamanan", "icon" => '<svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM12 12V16M12 8H12.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'],
+                ["name" => "Direktorat Sumber Daya Manusia dan Urusan Umum", "icon" => '<svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7V17L12 22L22 17V7L12 2ZM9 12H15M12 12V16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'],
+                ["name" => "Direktorat Pengembangan Bisnis dan Hubungan Kelembagaan", "icon" => '<svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 21V3H21V21H3ZM7 10H17M7 14H14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'],
+                ["name" => "Direktorat Keuangan dan Manajemen Risiko", "icon" => '<svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 3V21H19V3H5ZM9 21V14H15V21M9 10H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'],
             ];
 
-            foreach ($categories as $category) {
+            foreach ($units as $unit) {
                 echo '<div class="col d-flex justify-content-evenly">';
                 echo '  <div class="category-item d-flex flex-column align-items-center">';
                 echo '    <div class="category-icon rounded-circle d-flex align-items-center justify-content-center">';
-                echo '      <img src="' . $category["icon"] . '" alt="' . $category["name"] . '" class="icon-img">';
+                echo $unit["icon"];
                 echo '    </div>';
-                echo '    <p class="category-name mt-2 text-center">' . $category["name"] . '</p>';
+                echo '    <p class="category-name mt-2 text-center">' . $unit["name"] . '</p>';
                 echo '  </div>';
                 echo '</div>';
             }
@@ -120,80 +111,40 @@
         </div>
     </div>
 
-    <!-- Kategori Pelatihan -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <!-- Pelatihan Open Access -->
-                <div class="col-md-4 mb-3">
-                    <a href="/listcourse" class="text-decoration-none" style="height: 200px;">
-                        <div class="klc-home-box has-background-open-access">
-                            <h5 class="fw-bold">Pelatihan "Open Access"</h5>
-                            <p>Terdapat <strong>0</strong> e-Learning & microlearning terbuka untuk siapa saja!</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Pelatihan Atase Keuangan -->
-                <div class="col-md-4 mb-3">
-                    <a href="/listcourse" class="text-decoration-none">
-                        <div class="klc-home-box has-background-atase-access">
-                            <h5 class="fw-bold">Pelatihan untuk "Atase Keuangan"</h5>
-                            <p>Terdapat <strong>0</strong> e-Learning & microlearning untuk para Atase Keuangan</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Pelatihan UMKM -->
-                <div class="col-md-4 mb-3">
-                    <a href="/listcourse" class="text-decoration-none">
-                        <div class="klc-home-box has-background-umkm-access">
-                            <h5 class="fw-bold">Pelatihan untuk "UMKM"</h5>
-                            <p>Terdapat <strong>0</strong> e-Learning & microlearning untuk para UMKM</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pelatihan Terbaru -->
+    <!-- Pengetahuan Terbaru -->
     <div class="container py-5">
-        <h2 class="section-title">Pelatihan Terbaru</h2>
+        <h2 class="section-title">Pengetahuan Terbaru</h2>
         <div id="carouselTerbaru" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <?php
-                $pelatihanTerbaru = [
-                    ["title" => "E-Learning Keselamatan Operasional Kereta Api", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.98", "peserta" => "1200 peserta"],
-                    ["title" => "Manajemen Pemeliharaan Sarana Perkeretaapian", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.95", "peserta" => "890 peserta"],
-                    ["title" => "Sistem Persinyalan Kereta Api Digital", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.97", "peserta" => "750 peserta"],
-                    ["title" => "Pelatihan Keamanan di Stasiun dan Jalur Kereta", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "5.00", "peserta" => "1320 peserta"],
-                    ["title" => "Perawatan dan Troubleshooting Lokomotif Diesel", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.92", "peserta" => "980 peserta"],
-                    ["title" => "Manajemen Pelayanan Penumpang Kereta Api", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.96", "peserta" => "1450 peserta"],
-                    ["title" => "Teknik Dasar Perawatan Rel dan Bantalan", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.94", "peserta" => "670 peserta"],
-                    ["title" => "Analisis Kinerja dan Efisiensi Perkeretaapian", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.99", "peserta" => "810 peserta"]
+                $pengetahuanTerbaru = [
+                    ["title" => "Profil Direktorat Perdagangan", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "1200 kali dilihat"],
+                    ["title" => "Struktur Organisasi Perusahaan", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "890 kali dilihat"],
+                    ["title" => "Kebijakan Keselamatan Kerja", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "750 kali dilihat"],
+                    ["title" => "SOP Penanganan Darurat", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "1320 kali dilihat"],
+                    ["title" => "Profil Direktorat Perdagangan", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "1200 kali dilihat"],
+                    ["title" => "Struktur Organisasi Perusahaan", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "890 kali dilihat"],
+                    ["title" => "Kebijakan Keselamatan Kerja", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "750 kali dilihat"],
+                    ["title" => "SOP Penanganan Darurat", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "1320 kali dilihat"],
                 ];
 
-                $chunks = array_chunk($pelatihanTerbaru, 4);
+                $chunks = array_chunk($pengetahuanTerbaru, 4);
                 foreach ($chunks as $index => $group) {
                     $active = ($index === 0) ? 'active' : '';
-                    echo '<div class="carousel-item ' . $active . '">';
-                    echo '<div class="row">';
-                    foreach ($group as $pelatihan) {
+                    echo '<div class="carousel-item ' . $active . '"><div class="row">';
+                    foreach ($group as $pengetahuan) {
                         echo '<div class="col-md-3">';
                         echo '  <div class="card mx-auto">';
-                        echo '    <img src="' . $pelatihan["image"] . '" class="card-img-top" alt="' . $pelatihan["title"] . '">';
+                        echo '    <img src="' . $pengetahuan["image"] . '" class="card-img-top" alt="' . $pengetahuan["title"] . '">';
                         echo '    <div class="card-body">';
-                        echo '      <h5 class="card-title">' . $pelatihan["title"] . '</h5>';
-                        echo '      <p class="text-muted">' . $pelatihan["peserta"] . '</p>';
-                        echo '      <span class="badge bg-warning text-dark mb-2">⭐ ' . $pelatihan["rating"] . '</span>';
+                        echo '      <h5 class="card-title">' . $pengetahuan["title"] . '</h5>';
+                        echo '      <p class="text-muted">' . $pengetahuan["views"] . '</p>';
                         echo '      <a href="#" class="btn btn-success btn-sm btn-lihat">Lihat</a>';
                         echo '    </div>';
                         echo '  </div>';
                         echo '</div>';
                     }
-                    echo '</div>';
-                    echo '</div>';
+                    echo '</div></div>';
                 }
                 ?>
             </div>
@@ -206,43 +157,40 @@
         </div>
     </div>
 
-    <!-- Pelatihan Terpopuler -->
+    <!-- Pengetahuan Terpopuler -->
     <div class="container py-5">
         <h2 class="section-title">Pelatihan Terpopuler</h2>
         <div id="carouselPopuler" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <?php
                 $pelatihanPopuler = [
-                    ["title" => "E-Learning Keselamatan dan SOP Masinis", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.98", "peserta" => "17000 peserta"],
-                    ["title" => "Manajemen Pemeliharaan Rel dan Jembatan", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.95", "peserta" => "13450 peserta"],
-                    ["title" => "Teknologi Transportasi Perkeretaapian", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.96", "peserta" => "12890 peserta"],
-                    ["title" => "E-Learning Manajemen Stasiun & Layanan Penumpang", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.97", "peserta" => "14560 peserta"],
-                    ["title" => "Sistem Persinyalan Kereta Berbasis AI", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.99", "peserta" => "13820 peserta"],
-                    ["title" => "Pelatihan Perawatan Lokomotif Elektrik", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.95", "peserta" => "12375 peserta"],
-                    ["title" => "Strategi Pengelolaan Risiko Operasional Kereta", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.98", "peserta" => "11050 peserta"],
-                    ["title" => "E-Learning Perencanaan Rute dan Jadwal Kereta", "image" => "assets/img/pelatihan/pelatihan-1.jpeg", "rating" => "4.96", "peserta" => "10580 peserta"]
+                    ["title" => "Profil Direktorat Perdagangan", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "1200 kali dilihat"],
+                    ["title" => "Struktur Organisasi Perusahaan", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "890 kali dilihat"],
+                    ["title" => "Kebijakan Keselamatan Kerja", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "750 kali dilihat"],
+                    ["title" => "SOP Penanganan Darurat", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "1320 kali dilihat"],
+                    ["title" => "Profil Direktorat Perdagangan", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "1200 kali dilihat"],
+                    ["title" => "Struktur Organisasi Perusahaan", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "890 kali dilihat"],
+                    ["title" => "Kebijakan Keselamatan Kerja", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "750 kali dilihat"],
+                    ["title" => "SOP Penanganan Darurat", "image" => "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/05/2024/06/22/22fkai-klt-dok-545781542.jpg", "views" => "1320 kali dilihat"],
                 ];
 
                 $chunks = array_chunk($pelatihanPopuler, 4);
                 foreach ($chunks as $index => $group) {
                     $active = ($index === 0) ? 'active' : '';
-                    echo '<div class="carousel-item ' . $active . '">';
-                    echo '<div class="row">';
+                    echo '<div class="carousel-item ' . $active . '"><div class="row">';
                     foreach ($group as $pelatihan) {
                         echo '<div class="col-md-3">';
                         echo '  <div class="card">';
                         echo '    <img src="' . $pelatihan["image"] . '" class="card-img-top" alt="' . $pelatihan["title"] . '">';
                         echo '    <div class="card-body">';
                         echo '      <h5 class="card-title">' . $pelatihan["title"] . '</h5>';
-                        echo '      <p class="text-muted">' . $pelatihan["peserta"] . '</p>';
-                        echo '      <span class="badge bg-warning text-dark mb-2">⭐ ' . $pelatihan["rating"] . '</span>';
+                        echo '      <p class="text-muted">' . $pelatihan["views"] . '</p>';
                         echo '      <a href="#" class="btn btn-sm btn-success btn-lihat">Lihat</a>';
                         echo '    </div>';
                         echo '  </div>';
                         echo '</div>';
                     }
-                    echo '</div>';
-                    echo '</div>';
+                    echo '</div></div>';
                 }
                 ?>
             </div>

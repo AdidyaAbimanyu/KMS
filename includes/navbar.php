@@ -19,18 +19,16 @@
         <!-- Menu Items -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link text-light" href="./">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="./pelatihan">Pelatihan</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="/knowledge">Pusat Pengetahuan</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/kms">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="/kms/pengetahuan.php">Pusat Pengetahuan</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link text-light" href="#" id="helpDropdown" data-bs-toggle="dropdown" role="button">Bantuan</a>
                     <ul class="dropdown-menu" aria-labelledby="helpDropdown">
-                        <li><a class="dropdown-item" href="/help/faqs">Pusat Bantuan</a></li>
-                        <li><a class="dropdown-item" href="/help/contact">Panduan Pengguna</a></li>
-                        <li><a class="dropdown-item" href="/help/tutorials">Tutorial</a></li>
+                        <li><a class="dropdown-item" href="/help/faqs.php">Pusat Bantuan</a></li>
+                        <li><a class="dropdown-item" href="/help/contact.php">Hubungi Kami</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link btn text-dark bg-light" href="/signin">Masuk</a></li>
+                <li class="nav-item"><a class="nav-link btn text-dark bg-orange" href="/kms/login/" style="background-color: #e68c3a">Masuk</a></li>
             </ul>
         </div>
     </div>

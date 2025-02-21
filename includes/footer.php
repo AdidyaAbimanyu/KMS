@@ -13,16 +13,6 @@
 
             <!-- Kolom Layanan -->
             <div class="col-md-4">
-                <h5 class="text-light fw-bold">Layanan</h5>
-                <ul class="list-unstyled">
-                    <li><a href="/jadwal" class="text-light text-decoration-none">Jadwal Kereta</a></li>
-                    <li><a href="/reservasi" class="text-light text-decoration-none">Reservasi Tiket</a></li>
-                    <li><a href="/stasiun" class="text-light text-decoration-none">Informasi Stasiun</a></li>
-                    <li><a href="/kelas" class="text-light text-decoration-none">Kelas dan Fasilitas</a></li>
-                    <li><a href="/cargo" class="text-light text-decoration-none">Layanan Kargo</a></li>
-                    <li><a href="/kereta-wisata" class="text-light text-decoration-none">Kereta Wisata</a></li>
-                </ul>
-
                 <h5 class="text-light fw-bold mt-3">Bantuan</h5>
                 <ul class="list-unstyled">
                     <li><a href="/faq" class="text-light text-decoration-none">FAQ</a></li>

@@ -1,6 +1,7 @@
 /* Background umum untuk seluruh halaman */
 body {
-    background-image: url('../img/background.png'); /* Ganti dengan path gambar */
+    background-image: url('../img/background.png');
+    /* Ganti dengan path gambar */
     background-repeat: repeat;
     padding-top: 70px;
 }
@@ -31,14 +32,11 @@ Hero
     justify-content: center;
 }
 
-/* Set ukuran tetap untuk carousel */
 #announcementCarousel {
     width: 900px;
-    /* Pastikan lebar tetap */
     max-width: 100%;
 }
 
-/* Pastikan semua carousel item memiliki ukuran yang sama */
 .carousel-inner {
     width: 100%;
 }
@@ -48,18 +46,14 @@ Hero
     text-align: center;
 }
 
-/* Ukuran gambar dalam carousel */
 .announcement-box img {
     width: 100%;
     max-width: 100%;
     height: 350px;
-    /* Diperbesar dan tetap */
     object-fit: cover;
-    /* Hindari distorsi */
     border-radius: 10px;
 }
 
-/* Tombol navigasi di luar gambar */
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
@@ -71,7 +65,6 @@ Hero
     border-radius: 50%;
 }
 
-/* Posisi tombol navigasi di luar carousel */
 .carousel-control-prev {
     left: -90px;
 }
@@ -80,7 +73,6 @@ Hero
     right: -90px;
 }
 
-/* Warna panah agar lebih terlihat */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(1);
@@ -92,7 +84,6 @@ Apa itu KLC?
 
 .section-klc {
     background-color: #2C2C54;
-    /* Ganti dengan warna sesuai desain */
     padding: 50px 0;
 }
 
@@ -119,10 +110,8 @@ Kategori
 .category-icon {
     width: 80px;
     height: 80px;
-    background-color: #f0f0f0;
-    /* Warna background */
+    background-color: #2C2C54;
     border-radius: 50%;
-    /* Membuat lingkaran */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,7 +119,6 @@ Kategori
 
 .icon-img {
     width: 50px;
-    /* Ukuran ikon */
     height: auto;
 }
 
@@ -153,17 +141,14 @@ Kategori Pelatihan
 
 .has-background-open-access {
     background-color: #007bff;
-    /* Warna untuk Open Access */
 }
 
 .has-background-atase-access {
     background-color: #28a745;
-    /* Warna untuk Atase Keuangan */
 }
 
 .has-background-umkm-access {
     background-color: #ffc107;
-    /* Warna untuk UMKM */
     color: #000;
 }
 
@@ -172,7 +157,7 @@ Kategori Pelatihan
 }
 
 /*
-Daftar Pelatihan
+Daftar Pengetahuan
 */
 
 .section-title {
@@ -181,10 +166,11 @@ Daftar Pelatihan
     margin-bottom: 30px;
 }
 
-.card {
-    height: 100%;
+.card-body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
 }
 
 .card-img-top {
@@ -199,12 +185,7 @@ Daftar Pelatihan
 }
 
 .card-title {
-    font-weight: bold;
-    max-height: 3rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
-    display: block;
+    min-height: 20px;
 }
 
 .text-muted {
@@ -220,8 +201,5 @@ Daftar Pelatihan
 }
 
 .btn-lihat {
-    flex-grow: 1;
-    text-align: center;
-    padding: 5px 10px;
-    font-size: 0.9rem;
+    margin-top: auto;
 }
